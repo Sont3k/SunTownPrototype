@@ -4,8 +4,7 @@ node_modules
 .idea
 logs
 #build
-dist
-dist/static
+dist/
 
 src/sun/gallery-images
 src/sun/news-images
