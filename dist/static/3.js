@@ -33,7 +33,7 @@ var _Header = _interopRequireDefault(__webpack_require__(38));
 
 var _SEO = _interopRequireDefault(__webpack_require__(39));
 
-__webpack_require__(880);
+__webpack_require__(884);
 
 var _config = __webpack_require__(62);
 

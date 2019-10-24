@@ -15,7 +15,7 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(__webpack_require__(0));
 
-var _Main = _interopRequireDefault(__webpack_require__(315));
+var _Main = _interopRequireDefault(__webpack_require__(316));
 
 //Core
 //Components

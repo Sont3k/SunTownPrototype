@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 319:
+/***/ 320:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33,13 +33,13 @@ var _react = _interopRequireWildcard(__webpack_require__(0));
 
 var _reactRouterDom = __webpack_require__(50);
 
-var _reactRedux = __webpack_require__(27);
+var _reactRedux = __webpack_require__(26);
 
 var _redux = __webpack_require__(51);
 
-var _authActions = __webpack_require__(893);
+var _authActions = __webpack_require__(897);
 
-__webpack_require__(881);
+__webpack_require__(885);
 
 var _logo = _interopRequireDefault(__webpack_require__(172));
 
@@ -161,7 +161,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 893:
+/***/ 897:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -172,9 +172,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.authActions = void 0;
 
-var _types = __webpack_require__(28);
+var _types = __webpack_require__(27);
 
-var _auth = __webpack_require__(878);
+var _auth = __webpack_require__(882);
 
 var authActions = {
   login: login

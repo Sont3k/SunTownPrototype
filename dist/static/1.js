@@ -33,23 +33,23 @@ var _react = _interopRequireWildcard(__webpack_require__(0));
 
 var d3 = _interopRequireWildcard(__webpack_require__(34));
 
-__webpack_require__(885);
+__webpack_require__(889);
 
-var _selector_arrow = _interopRequireDefault(__webpack_require__(886));
+var _selector_arrow = _interopRequireDefault(__webpack_require__(890));
 
-var _close_button = _interopRequireDefault(__webpack_require__(887));
+var _close_button = _interopRequireDefault(__webpack_require__(891));
 
-var _decoration_circles = _interopRequireDefault(__webpack_require__(888));
+var _decoration_circles = _interopRequireDefault(__webpack_require__(892));
 
-var _form_decoration_line = _interopRequireDefault(__webpack_require__(889));
+var _form_decoration_line = _interopRequireDefault(__webpack_require__(893));
 
 var _serviceUtils = __webpack_require__(81);
 
 var _config = __webpack_require__(62);
 
-var _reactGoogleRecaptcha = _interopRequireDefault(__webpack_require__(890));
+var _reactGoogleRecaptcha = _interopRequireDefault(__webpack_require__(894));
 
-var _reactRedux = __webpack_require__(27);
+var _reactRedux = __webpack_require__(26);
 
 var _SEO = _interopRequireDefault(__webpack_require__(39));
 
@@ -710,7 +710,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 879:
+/***/ 883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -741,6 +741,7 @@ function (_React$Component) {
     _this = _React$Component.call(this) || this;
     _this.handleExpired = _this.handleExpired.bind(_assertThisInitialized(_this));
     _this.handleErrored = _this.handleErrored.bind(_assertThisInitialized(_this));
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleRecaptchaRef = _this.handleRecaptchaRef.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -782,8 +783,8 @@ function (_React$Component) {
   _proto.handleExpired = function handleExpired() {
     if (this.props.onExpired) {
       this.props.onExpired();
-    } else if (this.props.onChange) {
-      this.props.onChange(null);
+    } else {
+      this.handleChange(null);
     }
   };
 
@@ -791,12 +792,16 @@ function (_React$Component) {
     if (this.props.onErrored) this.props.onErrored();
   };
 
+  _proto.handleChange = function handleChange(token) {
+    if (this.props.onChange) this.props.onChange(token);
+  };
+
   _proto.explicitRender = function explicitRender() {
     if (this.props.grecaptcha && this.props.grecaptcha.render && this._widgetId === undefined) {
       var wrapper = document.createElement("div");
       this._widgetId = this.props.grecaptcha.render(wrapper, {
         sitekey: this.props.sitekey,
-        callback: this.props.onChange,
+        callback: this.handleChange,
         theme: this.props.theme,
         type: this.props.type,
         tabindex: this.props.tabindex,
@@ -906,55 +911,55 @@ ReCAPTCHA.defaultProps = {
 
 /***/ }),
 
-/***/ 885:
+/***/ 889:
 /***/ (function(module, exports, __webpack_require__) {
 
 // removed by extract-text-webpack-plugin
 if (false) {
 	module.hot.accept();
 	if (module.hot.data) {
-		var neverUsed = 1570117945104
+		var neverUsed = 1571917442128
 		require("../../../node_modules/extract-css-chunks-webpack-plugin/hotModuleReplacement.js")("/", "/static/css/1.css");
 	}
 }
 
 /***/ }),
 
-/***/ 886:
+/***/ 890:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMC44NTciIGhlaWdodD0iMTUuMzk1IiB2aWV3Qm94PSIwIDAgMTAuODU3IDE1LjM5NSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2NDAuOTk1IC00NDkuMTA2KSI+PHBhdGggZD0iTTE4NzYuNS03NDdsNC42NjctMy40LDUuMTkxLDMuNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIzNSAxMjAwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik0xODc2LjUtNzQ3bDQuNjY3LTMuNCw1LjE5MSwzLjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM1MjcuODQ4IC0yODYuMzkyKSByb3RhdGUoMTgwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPjwvZz48L3N2Zz4="
 
 /***/ }),
 
-/***/ 887:
+/***/ 891:
 /***/ (function(module, exports) {
 
 module.exports = "/static/media/close_button.svg";
 
 /***/ }),
 
-/***/ 888:
+/***/ 892:
 /***/ (function(module, exports) {
 
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzguNzUyIiBoZWlnaHQ9IjEyMy41NDciIHZpZXdCb3g9IjAgMCAxMzguNzUyIDEyMy41NDciPgogIDxnIGlkPSJHcm91cF80MjM3IiBkYXRhLW5hbWU9Ikdyb3VwIDQyMzciIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MC4zNzcgLTkwMy4yMjcpIj4KICAgIDxjaXJjbGUgaWQ9IkVsbGlwc2VfNzUiIGRhdGEtbmFtZT0iRWxsaXBzZSA3NSIgY3g9IjQ2IiBjeT0iNDYiIHI9IjQ2IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC45NjYsIDAuMjU5LCAtMC4yNTksIC0wLjk2NiwgMTgzLjA1NCwgMTAwMi45NjIpIiBmaWxsPSIjODZiODJhIi8+CiAgICA8Y2lyY2xlIGlkPSJFbGxpcHNlXzc0IiBkYXRhLW5hbWU9IkVsbGlwc2UgNzQiIGN4PSIxOCIgY3k9IjE4IiByPSIxOCIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuOTY2LCAwLjI1OSwgLTAuMjU5LCAtMC45NjYsIDIwOS4xMjksIDkzOCkiIGZpbGw9IiM4NmI4MmEiLz4KICAgIDxjaXJjbGUgaWQ9IkVsbGlwc2VfNzYiIGRhdGEtbmFtZT0iRWxsaXBzZSA3NiIgY3g9IjkiIGN5PSI5IiByPSI5IiB0cmFuc2Zvcm09Im1hdHJpeCgtMC45NjYsIDAuMjU5LCAtMC4yNTksIC0wLjk2NiwgMTYwLjEwNiwgOTIwLjYzNikiIGZpbGw9IiM4NmI4MmEiLz4KICA8L2c+Cjwvc3ZnPgo="
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzguNzUyIiBoZWlnaHQ9IjEyMy41NDciIHZpZXdCb3g9IjAgMCAxMzguNzUyIDEyMy41NDciPg0KICA8ZyBpZD0iR3JvdXBfNDIzNyIgZGF0YS1uYW1lPSJHcm91cCA0MjM3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzAuMzc3IC05MDMuMjI3KSI+DQogICAgPGNpcmNsZSBpZD0iRWxsaXBzZV83NSIgZGF0YS1uYW1lPSJFbGxpcHNlIDc1IiBjeD0iNDYiIGN5PSI0NiIgcj0iNDYiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjk2NiwgMC4yNTksIC0wLjI1OSwgLTAuOTY2LCAxODMuMDU0LCAxMDAyLjk2MikiIGZpbGw9IiM4NmI4MmEiLz4NCiAgICA8Y2lyY2xlIGlkPSJFbGxpcHNlXzc0IiBkYXRhLW5hbWU9IkVsbGlwc2UgNzQiIGN4PSIxOCIgY3k9IjE4IiByPSIxOCIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuOTY2LCAwLjI1OSwgLTAuMjU5LCAtMC45NjYsIDIwOS4xMjksIDkzOCkiIGZpbGw9IiM4NmI4MmEiLz4NCiAgICA8Y2lyY2xlIGlkPSJFbGxpcHNlXzc2IiBkYXRhLW5hbWU9IkVsbGlwc2UgNzYiIGN4PSI5IiBjeT0iOSIgcj0iOSIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuOTY2LCAwLjI1OSwgLTAuMjU5LCAtMC45NjYsIDE2MC4xMDYsIDkyMC42MzYpIiBmaWxsPSIjODZiODJhIi8+DQogIDwvZz4NCjwvc3ZnPg0K"
 
 /***/ }),
 
-/***/ 889:
+/***/ 893:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDcxLjQ0IiBoZWlnaHQ9Ijg1OS44OTIiIHZpZXdCb3g9IjAgMCAxNDcxLjQ0IDg1OS44OTIiPjxwYXRoIGQ9Ik0xMTI1LjY5MS0xMTM1LjkyNXYxMDAuNDQ3aDU5NC44NzZWLTk3MS4zaDkzLjY1OHY5NS40NjRoNzc2LjkwNnY1OTYuODA2SDE4NTQuNDEzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEyMi42OTEgMTEzNS45MjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiM4NWI3MjgiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWRhc2hhcnJheT0iNiA2Ii8+PC9zdmc+"
 
 /***/ }),
 
-/***/ 890:
+/***/ 894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__recaptcha_wrapper__ = __webpack_require__(891);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recaptcha__ = __webpack_require__(879);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__recaptcha_wrapper__ = __webpack_require__(895);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__recaptcha__ = __webpack_require__(883);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ReCAPTCHA", function() { return __WEBPACK_IMPORTED_MODULE_1__recaptcha__["a"]; });
 
 
@@ -963,12 +968,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 891:
+/***/ 895:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__recaptcha__ = __webpack_require__(879);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_async_script__ = __webpack_require__(892);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__recaptcha__ = __webpack_require__(883);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_async_script__ = __webpack_require__(896);
 
 
 var callbackName = "onloadcallback";
@@ -991,7 +996,7 @@ function getURL() {
 
 /***/ }),
 
-/***/ 892:
+/***/ 896:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1000,7 +1005,7 @@ function getURL() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(315);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
