@@ -236,6 +236,12 @@ class Header extends Component {
                             </Link>
                             <span />
                         </li>
+                        <li>
+                            <Link to={curLang ? "/ua/video" : "/video"}>
+                                {curLang ? "Відео" : "Видео"}
+                            </Link>
+                            <span />
+                        </li>
                     </ul>
                     <span className="m_header_language_box">
                         <span className="m_lang_ua">UA</span>

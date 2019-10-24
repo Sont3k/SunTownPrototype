@@ -5,6 +5,7 @@ node_modules
 logs
 #build
 dist
+dist/static
 
 src/sun/gallery-images
 src/sun/news-images
