@@ -1,6 +1,9 @@
 # node.js
 node_modules/
 
+#build
+dist/
+
 # config
 
 # static files
