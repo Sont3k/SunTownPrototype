@@ -1,0 +1,23 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9%;
+}
+
+.Content {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 48px;
+}
+
+.Description {
+    margin-left: 2%;
+}
