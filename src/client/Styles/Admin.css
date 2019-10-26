@@ -238,6 +238,8 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
+    margin-left: 8%;
 }
 
 .admin_header_button {

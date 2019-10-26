@@ -6,6 +6,7 @@ import AdminMail from "./AdminMail";
 import AdminPartners from "./AdminPartners";
 import SeoPanel from "./SeoPanel";
 import EquinoxRights from "./EquinoxRights";
+import AdminVideo from "./AdminVideo";
 
 export default class AdminContainer extends Component {
     constructor(props) {
@@ -31,6 +32,8 @@ export default class AdminContainer extends Component {
                 return <SeoPanel />;
             case "admin-mail":
                 return <AdminMail />;
+            case "admin-video":
+                return <AdminVideo />
             default:
                 return;
         }

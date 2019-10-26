@@ -29,6 +29,10 @@ export default class AdminHeader extends Component {
             <button className='admin_header_button' style={{boxShadow: `0px 0px 4px ${this.props.currentPage === 'admin-mail' ? 'blue' : 'black'}`}}
               onClick={() => this.props.routing('admin-mail')}>Mail</button>
           </li>
+          <li>
+            <button className='admin_header_button' style={{boxShadow: `0px 0px 4px ${this.props.currentPage === 'admin-video' ? 'blue' : 'black'}`}}
+              onClick={() => this.props.routing('admin-video')}>Video</button>
+          </li>
         </ul>
       </div>
     )
