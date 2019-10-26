@@ -48,7 +48,7 @@ export default class AdminMail extends Component {
           <div className='admin_input_line'>
               <h2>Email</h2>
               <input
-                className='admin_gallary_input'
+                className='admin_gallery_input'
                 type="email" 
                 id="subEmail"
                 required
@@ -60,7 +60,7 @@ export default class AdminMail extends Component {
             <div className='admin_input_line'>
             <h2>Имя</h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text" 
               id="subName"
               required

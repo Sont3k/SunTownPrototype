@@ -422,7 +422,7 @@ class Admin extends Component {
           <div className='admin_input_line'>
             <h2>Название статьи(title)</h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text" 
               id="admin_title"
               value={this.state.isRu ? this.state.postRu.admin_title : this.state.post.admin_title} 
@@ -432,7 +432,7 @@ class Admin extends Component {
           <div className='admin_input_line'>
             <h2>Описание(description)</h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text" 
               value={this.state.isRu ? this.state.postRu.admin_description : this.state.post.admin_description} 
               id="admin_description"
@@ -444,7 +444,7 @@ class Admin extends Component {
             <div className='admin_input_line'>
             <h2>Url</h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text"
               value={this.state.post.admin_url} 
               id="admin_url"

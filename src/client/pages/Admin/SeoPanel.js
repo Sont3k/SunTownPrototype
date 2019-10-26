@@ -121,7 +121,7 @@ class SeoPanel extends Component {
           <div className='admin_input_line'>
             <h2>Название (title): </h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text"
               name="title"
               value={this.state.seoData.title}
@@ -153,7 +153,7 @@ class SeoPanel extends Component {
           <div className='admin_input_line'>
             <h2>Название (RU) (titleRu): </h2>
             <input
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text"
               name="titleRu"
               value={this.state.seoData.titleRu}

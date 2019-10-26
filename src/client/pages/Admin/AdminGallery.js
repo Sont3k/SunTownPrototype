@@ -242,7 +242,7 @@ class AdminGallery extends Component {
         <form>
           <div className='admin_input_line'>
             <h2>Описание(description)</h2>
-            <input className='admin_gallary_input' type="text"
+            <input className='admin_gallery_input' type="text"
               id="admin_gallery_description"
               value={this.state.isRu ? this.state.galleryDataRu.admin_gallery_description : this.state.galleryData.admin_gallery_description}
               onChange={this.onChange}
@@ -252,7 +252,7 @@ class AdminGallery extends Component {
             !this.state.isRu ?
             <div className='admin_input_line'>
             <h2>Альт изображения(imageAlt)</h2>
-            <input className='admin_gallary_input' type="text"
+            <input className='admin_gallery_input' type="text"
               id="admin_gallery_imageAlt"
               value={this.state.galleryData.admin_gallery_imageAlt}
               onChange={this.onChange}
@@ -262,7 +262,7 @@ class AdminGallery extends Component {
           {
             !this.state.isRu ? <div className='admin_input_line'>
             <h2>Тайтл изображения(imageTitle)</h2>
-            <input className='admin_gallary_input' type="text"
+            <input className='admin_gallery_input' type="text"
               id="admin_gallery_imageTitle"
               value={this.state.galleryData.admin_gallery_imageTitle}
               onChange={this.onChange}

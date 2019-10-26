@@ -442,7 +442,7 @@ class AdminPartners extends Component {
           <div className='admin_input_line'>
             <h2>Название компании(Company)</h2>
             <input
-              className='admin_gallary_input' 
+              className='admin_gallery_input' 
               type="text" 
               id="admin_partners_company" 
               required 
@@ -464,7 +464,7 @@ class AdminPartners extends Component {
             <div className='admin_input_line'>
             <h2>Url</h2>
             <input 
-              className='admin_gallary_input'
+              className='admin_gallery_input'
               type="text"
               id="admin_partners_url"
               required 
@@ -544,7 +544,7 @@ class AdminPartners extends Component {
              <div className='admin_input_line'>
              <h2>Название видео</h2>
              <input
-               className='admin_gallary_input'
+               className='admin_gallery_input'
                type="text"
                id="admin_partners_videoName"
                value={this.state.isRu ? this.state.postRu.admin_partners_videoName : this.state.post.admin_partners_videoName}
