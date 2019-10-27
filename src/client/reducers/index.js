@@ -5,6 +5,7 @@ import { authReducer } from './authReducer';
 import { partnersReducer } from './partnersReducer';
 import { seoReducer } from './seoReducer';
 import { languageReducer } from './languageReducer';
+import { videoReducer } from './videoReducer';
 
 export default combineReducers({
   articles: articleReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
   auth: authReducer,
   partners: partnersReducer,
   seo: seoReducer,
-  lang: languageReducer
+  lang: languageReducer,
+  videoList: videoReducer,
 });

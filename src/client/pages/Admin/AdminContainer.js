@@ -32,7 +32,7 @@ export default class AdminContainer extends Component {
                 return <SeoPanel />;
             case "admin-mail":
                 return <AdminMail />;
-            case "admin-video":
+            case "admin-video-list":
                 return <AdminVideo />
             default:
                 return;
