@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import "../../Styles/Admin.css";
+import { videoActions } from '../../actions/videoActions';
+import { authServices } from '../../services/auth.services';
 
-export default class AdminVideo extends Component {
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+const addVideo = videoActions.addVideo;
+const getVideoList = videoActions.getVideoList;
+const editVideo = videoActions.editVideo;
+const deleteVideo = videoActions.deleteVideo;
+const checkToken = authServices.checkToken;
+
+class AdminVideo extends Component {
   state = {
     videoData: {
       admin_video_description: "",
@@ -12,8 +23,18 @@ export default class AdminVideo extends Component {
       admin_video_videoTitle: ""
     },
     isRu: false,
-    file: "Файл не выбран"
+    file: "Файл не выбран",
+    isAuthed: true,
   };
+
+  // componentDidMount(){
+  //   checkToken()
+  //   .catch(err => {
+  //     this.setState({ isAuthed: false })
+  //     return
+  //   })
+  //   this.props.getVideoList();
+  // }
 
   onChange = e => {
     !this.state.isRu
@@ -104,3 +125,24 @@ export default class AdminVideo extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return { 
+    videoList: state.videoList
+  }
+};
+
+
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    addVideo,
+    getVideoList,
+    editVideo,
+    deleteVideo,
+    getSelectedVideo: id => dispatch({id, type: 'GET_SELECTED_VIDEO'}),
+    unselectVideo: () => dispatch({type: 'UNSELECT_VIDEO'})
+  }, dispatch)
+);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminVideo);
