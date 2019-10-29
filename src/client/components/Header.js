@@ -237,7 +237,7 @@ class Header extends Component {
                             <span />
                         </li>
                         <li>
-                            <Link to={curLang ? "/ua/video" : "/video"}>
+                            <Link to={curLang ? "/ua/videoList" : "/videoList"}>
                                 {curLang ? "Відео" : "Видео"}
                             </Link>
                             <span />

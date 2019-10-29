@@ -202,7 +202,7 @@ export default [
       loading
     }),
     exact: true,
-    path: "/video"
+    path: "/videoList"
   },
   {
     component: Loadable({
