@@ -22,6 +22,7 @@ const partners = require('./routes/partners');
 const seoRoute = require('./routes/seoRoute.js');
 const mailRoute = require('./routes/mailRoute');
 const subscriptionRoute = require('./routes/subscriptionRoute');
+const videoList = require('./routes/videoList');
 
 const app = express();
 
@@ -56,6 +57,8 @@ app.use('/', express.static('sitemap'));
 app.use('/news-images', express.static('news-images'));
 app.use('/gallery-images', express.static('gallery-images'));
 app.use('/partners-media', express.static('partners-media'));
+app.use('/video-files', express.static('video-files'));
+
 //app.use(express.static(path.join(__dirname, '.well-known/acme-challenge')));
 // Routes
 app.use('/api', seoRoute);
@@ -65,6 +68,7 @@ app.use('/api', user);
 app.use('/api', partners);
 app.use('/api', mailRoute);
 app.use('/api', subscriptionRoute);
+app.use('/api', videoList);
 
 app.use(express.static(__dirname + '/build1'));
 

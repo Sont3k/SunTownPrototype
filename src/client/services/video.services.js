@@ -18,15 +18,15 @@ async function addVideo(data) {
         body: data
     };
 
-    return fetch(`${apiUrl}/video`, requestOption).then(handleResponse);
+    return fetch(`${apiUrl}/videoList`, requestOption).then(handleResponse);
 }
 
 async function getVideoList() {
     const requestOption = {
         method: "GET"
     };
-    console.log("url", `${apiUrl}/video`);
-    return fetch(`${apiUrl}/video`, requestOption).then(handleResponse);
+    console.log("url", `${apiUrl}/videoList`);
+    return fetch(`${apiUrl}/videoList`, requestOption).then(handleResponse);
 }
 
 async function editVideo(id, data) {
@@ -51,7 +51,7 @@ async function deleteVideo(id) {
 }
 
 function videoAction(id, requestOptions) {
-    return fetch(`${apiUrl}/video/${id}`, requestOptions).then(
+    return fetch(`${apiUrl}/videoList/${id}`, requestOptions).then(
         handleResponse
     );
 }
